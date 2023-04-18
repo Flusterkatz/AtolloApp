@@ -11,7 +11,7 @@ class AppBase extends StatelessWidget {
     return MaterialApp(
       title: 'Atollo App',
       theme: ThemeData(primarySwatch: Colors.red,),
-      home: const SplashScreen(title: 'Atollo Splash Screen'),
+      home: const SplashScreen(),
     );
   }
 }

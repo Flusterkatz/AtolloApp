@@ -1,15 +1,15 @@
 import 'package:flutter/material.dart';
 
-class SplashScreen extends StatefulWidget {
-  const SplashScreen({super.key, required this.title});
+import 'package:atollo_app/LoginScreen.dart';
 
-  final String title;
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
 
   @override
-  State<SplashScreen> createState() => _MyHomePageState();
+  State<SplashScreen> createState() => _SplashScreenState();
 }
 
-class _MyHomePageState extends State<SplashScreen> {
+class _SplashScreenState extends State<SplashScreen> {
   int _counter = 0;
 
   /*void _incrementCounter() {
@@ -47,7 +47,12 @@ class _MyHomePageState extends State<SplashScreen> {
                         backgroundColor: const Color(0x50ffffff),
                         padding: EdgeInsets.symmetric(vertical: 5.0, horizontal: 50.0),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const LoginScreen()),
+                      );
+                    },
                     child: const Text(
                         'LOG IN',
                         style: TextStyle(fontSize: 30)
@@ -58,7 +63,7 @@ class _MyHomePageState extends State<SplashScreen> {
                     onPressed: () {},
                     child: const Text(
                       'SIGN UP',
-                      style: TextStyle(fontSize: 30, decoration: TextDecoration.underline, color: const Color(0xffCADC48))
+                      style: TextStyle(fontSize: 30, decoration: TextDecoration.underline, color: Color(0xffCADC48))
                     )
                   )
                 ]
