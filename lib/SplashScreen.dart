@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:atollo_app/LoginScreen.dart';
+import 'package:atollo_app/RegisterScreen.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -10,13 +11,6 @@ class SplashScreen extends StatefulWidget {
 }
 
 class _SplashScreenState extends State<SplashScreen> {
-  int _counter = 0;
-
-  /*void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -60,7 +54,12 @@ class _SplashScreenState extends State<SplashScreen> {
                   ),
                   const SizedBox(height: 10),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const RegisterScreen()),
+                      );
+                    },
                     child: const Text(
                       'SIGN UP',
                       style: TextStyle(fontSize: 30, decoration: TextDecoration.underline, color: Color(0xffCADC48))

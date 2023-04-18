@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:atollo_app/RegisterScreen.dart';
+
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 
@@ -8,13 +10,6 @@ class LoginScreen extends StatefulWidget {
 }
 
 class _LoginScreenState extends State<LoginScreen> {
-  int _counter = 0;
-
-  /*void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }*/
 
   @override
   Widget build(BuildContext context) {
@@ -62,7 +57,12 @@ class _LoginScreenState extends State<LoginScreen> {
                 ),
                 const SizedBox(height: 25),
                 TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => const RegisterScreen()),
+                      );
+                    },
                     child: const Text(
                         'create an account',
                         style: TextStyle(fontSize: 25, decoration: TextDecoration.underline, color: Color(0xffCADC48)))
